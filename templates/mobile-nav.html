@@ -1,0 +1,18 @@
+<div class="navigation">
+   <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+   <label for="navi-toggle" class="navigation__button">
+   <span class="navigation__icon">&nbsp;</span>
+   </label>
+   <div class="navigation__background">&nbsp;</div>
+   <nav class="navigation__nav">
+      <ul class="navigation__list">
+         <li class="navigation__item"><a href="/" class="navigation__link"><span>০১</span>মূল পাতা</a></li>
+         <li class="navigation__item"><a href="{% url 'main:about_us' %}" class="navigation__link"><span>০২</span>প্রতিষ্ঠানের তথ্য</a></li>
+         <li class="navigation__item"><a href="{% url 'main:started' %}" class="navigation__link"><span>০৩</span>শুভ উদ্ধোধন</a></li>
+         <li class="navigation__item"><a href="{% url 'main:kids' %}" class="navigation__link"><span>০৪</span>শিশু বিনোদন</a></li>
+
+         <li class="navigation__item"><a href="{% url 'main:contact' %}" class="navigation__link"><span>০৫</span>যোগাযোগ</a></li>
+         <li class="navigation__item"><a href="/admin" class="navigation__link"><span>০৬</span>এডমিন প্রবেশ</a></li>
+      </ul>
+   </nav>
+</div>

@@ -1,0 +1,38 @@
+{% extends 'master.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/teachers.css' %}" />
+<link rel="stylesheet" href="{% static 'css/expectation.css' %}" />
+
+
+
+{% endblock head %} 
+
+
+{% block title %}
+প্রত্যাশা - ক্যালিক্স স্কুল এন্ড কলেজ
+{% endblock title %}
+
+{% block poster %} 
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+<main class="main-add_expectation" >
+ 
+
+  <div class="visitor-input">
+
+    <div class="input-wrap">
+      <form class="input__form" id="form" action="#" method="POST">
+
+        {{form.as_p}}
+        {{form.media}}
+      
+      </form>
+    </div>
+
+  </div>
+</main>
+{% endblock main %}

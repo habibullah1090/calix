@@ -1,0 +1,121 @@
+.advisers__title {
+  text-align: center;
+  margin: 6rem 0;
+}
+.advisers__title h1 {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+}
+.advisers__title h1 p {
+  background-color: green;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.advisers__main {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.adviser__desc {
+  background: red;
+  padding: 2.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.adviser__name {
+  background: rgba(180, 166, 174, 0.378);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  background-color: #6fe564;
+  /* background-color: #62f055; */
+  transition: 0.2s;
+  color: #fff;
+  border: 5rem solid #ff4848;
+  border-radius: 1rem;
+
+  font-size: 2rem;
+}
+
+.card:hover {
+  border: 5rem solid rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+.card__contenido {
+  padding: 5rem;
+  text-align: justify;
+}
+.card__title {
+  font-family: var(--title-font);
+  text-transform: capitalize;
+  /* color: var(--dark); */
+  line-height: 3.5rem;
+  font-size: 2.6rem;
+}
+.card__subtitle {
+  margin-top: 1rem;
+  color: #000000;
+}
+.card__text {
+  font-family: var(--text-font);
+  /* color: black; */
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 2rem;
+}
+.card__readbtn {
+  font-family: var(--text-font);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: red;
+  text-decoration: none;
+  line-height: 2.6rem;
+  transition: all ease 0.3s;
+  position: relative;
+
+  /* me */
+  text-transform: uppercase;
+}
+.card__readbtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: var(--dark);
+  transition: all ease 0.3s;
+}
+.card__readbtn:hover {
+  color: var(--dark);
+}
+.card__readbtn:hover::after {
+  width: 100%;
+}
+
+.divider {
+  background-color: var(--faded-gray);
+  height: 0.2rem;
+  max-width: 3rem;
+  margin: 1.5rem auto 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 3.5rem;
+  max-width: 120rem;
+  margin: 5rem auto;
+  padding: 0 1rem;
+}

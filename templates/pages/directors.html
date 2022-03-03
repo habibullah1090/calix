@@ -1,0 +1,112 @@
+{% extends 'master.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/advisers.css' %}" />
+<link rel="stylesheet" href="{% static 'css/card.css' %}" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+{% endblock head %} 
+
+{% block title %} 
+পরিচালকবৃন্দ - ক্যালিক্স স্কুল এন্ড কলেজ
+{% endblock title %}
+
+{% block poster %} 
+{% include 'poster.html' %} 
+{% endblock poster %} 
+
+{% block main %}
+<div class="directors__title red-green-center">
+  <h1>
+    <p>পরিচালকবৃন্দ</p>
+  </h1>
+</div>
+<main class="directors-main">
+
+
+
+
+   
+      {% comment %} <div class="card" data-href="{{director.pk}}">
+        <div class="card__contenido">
+            <h3 class="card__title">{{director.full_name}}</h3>
+            <h4 class="card__subtitle">
+              {{director.position}}
+            </h4>
+            <div class="divider">&nbsp;</div>
+            <p class="card__text">
+              {{director.short_description |safe}}
+            </p>
+          </div>
+      </div> {% endcomment %}
+
+
+      
+
+
+
+
+
+      <div class="directors-container">
+         {% for director in directors %}
+        <div class="director">
+
+          {% comment %} start flip orginal {% endcomment %}
+
+            <div class="container">
+              <div class="product">
+                <div class="product-inner" id="productBox">
+                  
+                  <div class="product-front">
+                    <div class="product-top">
+                      <h1>{{director.full_name}}</h1>
+                    </div>
+                    <div class="product-bottom">
+                      <p>Nike running shoes</p>
+                      <h2>{{director.position}}</h2>
+                      <h1><span>$</span>120</h1>
+                      <a href="{{director.phone}}"> {{director.phone}} </a>
+                      <div class="color-select">
+                        <div class="select-item">Back</div>
+                      </div>
+                    </div>
+                  </div>
+                  {% comment %} end of product front {% endcomment %}
+                  
+                  <div class="product-back">
+                    <div class="product-top product-top2">
+                      <h1>{{director.position}}</h1>
+                    </div>
+                    <div class="product-bottom">
+                      <p>Students helping the poor</p>
+                      <h2>Air Zoom Winflo 6</h2>
+                      <h1><span>&nbsp;</span></h1>
+                      <button type="button">Add To Bag</button> 
+                      <div class="color-select">
+                        <div class="select-item select-item-front">Front</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="left-side"></div>
+                  <div class="right-side"></div>
+                </div>
+              </div>
+            </div>
+            {% comment %} end flip orginal {% endcomment %}
+        </div>
+        {% endfor %}
+      </div>
+
+
+
+
+  </div>
+</main>
+
+{% endblock main %}
+
+{% block js %}
+<script src="{% static 'js/card.js' %}"></script>
+{% endblock js %}

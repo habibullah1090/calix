@@ -1,0 +1,77 @@
+{% extends 'master.html' %} 
+{% load static %} 
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'css/card.css' %}" />
+{% endblock head %} 
+
+
+{% block title %}
+সামাজিক কর্মকাণ্ড - ক্যালিক্স স্কুল এন্ড কলেজ
+{% endblock title %}
+
+{% block poster %} 
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+<div class="socialworks__title red-green-center ">
+  <h1>
+    <p>
+      সামাজিক কর্মকাণ্ড
+    </p>
+  </h1>
+</div>
+
+
+
+    
+
+    <div class="container">
+      <div class="product">
+         <div class="product-inner" id="productBox">
+          
+          <div class="product-front">
+            <div class="product-top">
+              <h1>help</h1>
+            </div>
+            <div class="product-bottom">
+              <p>Nike running shoes</p>
+              <h2>Air Zoom Winflo 6</h2>
+              <h1><span>$</span>120</h1>
+              <button type="button">Add To Bag</button>
+              <div class="color-select">
+                <div class="select-item" onclick="flipRight()">Details</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-back">
+            <p>Test</p>
+            <div class="product-top product-top2">
+              <h1>Nike</h1>
+            </div>
+            <div class="product-bottom">
+              <p>Students helping the poor</p>
+              <h2>Air Zoom Winflo 6</h2>
+              <h1><span>&nbsp;</span></h1>
+              <button type="button">Add To Bag</button> 
+              <div class="color-select">
+                <div class="select-item" onclick="flipLeft()">01</div>
+              </div>
+
+             </div> 
+          </div>
+
+          <div class="left-side"></div>
+          <div class="right-side"></div>
+        </div>
+      </div>
+    </div>
+    
+{% endblock main %}
+
+{% block js %}
+<script src="{% static 'js/card.js' %}"></script>
+{% endblock js %}

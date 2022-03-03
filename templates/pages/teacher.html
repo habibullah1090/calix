@@ -1,0 +1,36 @@
+{% extends 'master.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/teachers.css' %}" />
+{% endblock head %} 
+
+
+{% block title %}
+শিক্ষকমণ্ডলী - ক্যালিক্স স্কুল এন্ড কলেজ
+{% endblock title %}
+
+{% block poster %} 
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+
+<div class="teachers__title red-green-center ">
+  <h1>
+    <p>
+      {{teacher.nick_name}}
+    </p>
+  </h1>
+</div>
+
+<main class="teacher" >
+
+  
+
+
+</main>
+
+
+{% endblock main %}
+

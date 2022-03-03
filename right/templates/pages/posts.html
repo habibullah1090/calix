@@ -1,0 +1,49 @@
+{% extends 'master.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/lib.css' %}" />
+
+<style>
+  .lib__title h1 p{
+    padding: .5rem 3.0rem;
+  }
+</style>
+
+{% endblock head %} 
+
+
+{% block title %}
+পাঠাগার - ক্যালিক্স স্কুল এন্ড কলেজ
+{% endblock title %}
+
+{% block poster %} 
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+<main class="lib__main">
+
+
+
+
+  {% for item in libs %}
+  <div class="lib__title red-green-center">
+  <h1>
+    <p>
+      {{item.short_name}}
+      </p>
+    </h1>
+  </div>
+
+      <h1 class="lib__title-promary" >{{item.title_of_post}}</h1>
+      <div class="adviser__desc">
+
+        {{item.description | safe}}
+      </div>
+
+        {% endfor %}
+    </main>
+
+
+{% endblock main %}

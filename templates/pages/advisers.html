@@ -1,0 +1,62 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/advisers.css' %}">
+
+{% endblock head %}
+
+{% block title %}
+সম্মানিত উপদেষ্টা মণ্ডলী - ক্যালিক্স স্কুল এন্ড কলেজ 
+{% endblock title %}
+
+{% block poster %}
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+<main class="advisers__main">
+
+      <div class="advisers__title">
+        <h1><p>সম্মানিত উপদেষ্টা মণ্ডলী</p></h1>
+      </div>
+
+      <div class="advisers__grid grid">
+        {% for item in advisers %}
+          <div class="card" id="card" data-href="{{item.id}}" >
+              <div class="card__contenido">
+                <h3 class="card__title">{{item.position}}</h3>
+                <h4 class="card__subtitle">
+                {{item.full_name}}  
+                </h4>
+                <div class="divider">&nbsp;</div>
+                <div class="card__text">
+                {{item.short_description | safe}}
+                </div>
+                <a href=" {{item.id}} " class="card__readbtn "> &nbsp; </a>
+              </div>
+          </div>
+      {% endfor %}
+    </div>
+</main>
+{% endblock main %}
+
+{% block js %}
+<script>
+
+const card = document.getElementsByClassName("card");
+
+for (let i = 0; i < card.length; i++) {
+  const e = card[i];
+
+  console.log(e);
+
+  e.style.cursor = "pointer";
+  e.addEventListener("click", (_) => {
+    window.location.assign(e.dataset.href);
+  });
+}
+
+</script>
+
+{% endblock js %}

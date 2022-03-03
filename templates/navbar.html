@@ -1,0 +1,27 @@
+{% load static %}
+<nav id="nav-bar" class="nav-bar">
+
+  <ul class="nav__links">
+    <li class="nav__link nav__link--main-page">
+      <a id="main-page" href="/">মূল পাতা </a>
+    </li>
+
+    <div class="nav__links--right">
+      <li class="nav__link">
+        <a href="{% url 'main:about_us' %}"> প্রতিষ্ঠানের তথ্য</a>
+      </li>
+      <li class="nav__link">
+        <a href="{% url 'main:started' %}">শুভ উদ্ধোধন</a>
+      </li>
+      <li class="nav__link">
+        <a href="{% url 'main:kids' %}">শিশু বিনোদন</a>
+      </li>
+      <li class="nav__link">
+        <a href="{% url 'main:contact' %}"> যোগাযোগ</a>
+      </li>
+      <li class="nav__link">
+        <a href="/admin">এডমিন প্রবেশ</a>
+      </li>
+    </div>
+  </ul>
+</nav>

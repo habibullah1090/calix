@@ -1,0 +1,72 @@
+{% extends 'master.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/teachers.css' %}" />
+<link rel="stylesheet" href="{% static 'css/expectation.css' %}" />
+
+
+
+{% endblock head %} 
+
+
+{% block title %}
+প্রত্যাশা - ক্যালিক্স স্কুল এন্ড কলেজ
+{% endblock title %}
+
+{% block poster %} 
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+<main class="main-expectation" >
+
+  <div class="expectation__title red-green-center ">
+    <h1>
+      <p>
+        প্রত্যাশা
+      </p>
+    </h1>
+  </div>
+
+  
+
+  {% for item in posts %}
+
+  <section class="output">
+    <h1>{{ item.title_of_post }}</h1>
+    <div class="out__desc">
+      {{item.what_you_say | safe}}
+    </div>
+  </section>
+  <hr>
+  <br>
+  {% endfor %}
+
+  <div class="visitor-input">
+
+    <div class="input-wrap">
+      <form class="input__form" id="form" action="{% url 'main:add-expectation' %}" method="POST">
+        {{form.as_p }}
+        {% csrf_token %}
+
+        <button type="submit" id="submit" class="btn btn-primary">
+         
+              <div class="button_base b05_3d_roll">
+                  <div>POST</div>
+                  <div>POST</div>
+              </div>
+         
+        </button>
+        
+      </form>
+    </div>
+
+  </div>
+
+
+</main>
+
+
+
+{% endblock main %}

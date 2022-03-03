@@ -1,0 +1,40 @@
+{% extends 'master.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/lib.css' %}" />
+{% endblock head %} 
+
+
+{% block title %}
+ নোটিশ - ক্যালিক্স স্কুল এণ্ড কলেজ
+{% endblock title %}
+
+{% block poster %} 
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+
+<div class="teachers__title red-green-center ">
+  <h1>
+    <p>
+      নোটিশ
+    </p>
+  </h1>
+</div>
+
+<main class="notice-main" >
+    <div class="notice__container notice-page__container">
+        {% for item in notices %}
+          <div class="notice">
+            <h1 class="notice__title"> {{item.title_in_body}} </h1>
+            <div class="notice__desc">
+              {{item.description | safe}}
+            </div>
+          </div>
+        {% endfor %}
+    </div> 
+</main>
+
+{% endblock main %}

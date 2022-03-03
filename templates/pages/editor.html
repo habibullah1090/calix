@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CK editor | Customized built</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <style>
+      .helptext{display: none;}
+    </style>
+
+  </head>
+  <body
+    data-editor="DecoupledDocumentEditor"
+    data-collaboration="false"
+    data-revision-history="true"
+  >
+    {% include 'poster.html' %} 
+    {% include 'navbar.html' %}
+    <br />
+    <main>
+
+      <div class="form__container">
+        <form action="" method="POST">
+
+        </form>
+      </div>
+
+      <div class="centered">
+        <div class="row">
+          <div class="document-editor__toolbar"></div>
+        </div>
+        <div class="row row-editor">
+          <div class="editor-container">
+            <div class="editor">Start editting</div>
+          </div>
+        </div>
+      </div>
+
+
+      <section class="form-section">
+        <form action="{% url 'main:add-expectation' %}" method="post"></form>
+      </section>
+
+    </main>
+
+    <script src="{% static 'js/ckeditor.js' %}"></script>
+
+    <script>
+      DecoupledDocumentEditor.create(document.querySelector(".editor"), {
+        licenseKey: "",
+      })
+        .then((editor) => {
+          window.editor = editor;
+
+          // Set a custom container for the toolbar.
+          document
+            .querySelector(".document-editor__toolbar")
+            .appendChild(editor.ui.view.toolbar.element);
+          document.querySelector(".ck-toolbar").classList.add("ck-reset_all");
+
+        })
+        .catch((error) => {
+          console.error("Oops, something went wrong!");
+          console.error(
+            "Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:"
+          );
+          console.warn("Build id: hv6xm7adsxqm-atjvnpe2fn6r");
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+{% extends "master.html" %} 
+{% load static %} 
+
+{% block poster %} 
+{% include 'poster.html' %} 
+{% endblock poster %}
+
+{% block title %} 
+Home || Calix schools and college 
+{% endblock title %} 
+
+{% block main %}
+
+<main class="main-content">
+  <div class="main-left">
+    <ul class="main-left__links">
+      <li class="main-left__link">
+        <a href="{% url 'main:advisers' %}">উপদেষ্টামণ্ডলী</a>
+      </li>
+      <li class="main-left__link">
+        <a href="{% url 'main:directors' %}">পরিচালকবৃন্দ</a>
+      </li>
+      <li class="main-left__link">
+        <a href="{% url 'main:committee' %}">কমিটির সদস্যবৃন্দ</a>
+      </li>
+      <li class="main-left__link">
+        <a href="{% url 'main:teachers' %}">শিক্ষকমণ্ডলী</a>
+      </li>
+      <li class="main-left__link">
+        <a href="{% url 'main:lib' %}">পাঠাগার</a>
+      </li>
+      <li class="main-left__link">
+        <a href="{% url 'main:annualreport' %}">বার্ষিক প্রতিবেদন</a>
+      </li>
+      <li class="main-left__link">
+        <a href="{% url 'main:expectation' %}">প্রত্যাশা</a>
+      </li>
+      <li class="main-left__link">
+        <a href="{% url 'main:socialworks' %}">সামাজিক কর্মকাণ্ড</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main__middle">
+    <div class="pages">
+      <ul class="page__links">
+        <li class="page__link">
+          <a href="{% url "right:notice" %}">নোটিশ বোার্ড/বিজ্ঞপ্তি</a>
+        </li>
+        <li class="page__link">
+          <a href="{% url "right:results" %}">ফলাফল</a>
+        </li>
+        <li class="page__link">
+          <a href="{% url "right:admission" %}">ভর্তি ফরম</a>
+        </li>
+        <li class="page__link">
+          <a href="{% url "right:others" %}">অন্যান্য</a>
+        </li>
+      </ul>
+
+      <div class="notice">
+        <h3 class="notice__title">
+          {{notice.title}}
+        </h3>
+        <p class="notice__description">
+          {{notice.description | safe}}
+        </p>
+      </div>
+
+    </div>
+
+    <!-- image display -->
+    <div class="img-display">
+      <div class="img-display__title">
+        <!-- need to work here -->
+        <p>
+          <a
+            class="img-display__title--link"
+            href="{% url 'right:gallery' %}"
+            >ছবি সমাহার</a
+          >
+        </p>
+      </div>
+
+      <div class="calix-school-college">
+        <!-- <h3 class="sc-title">ক্যালিক্স স্কুল এণ্ড কলেজ</h3>
+          <div class="img__container">
+
+            <div class="images">
+
+              <div class="g1-img__box">
+                <img class="g-img chairman" src="{% static 'img/chairman.jpg' %}" alt="The chairman">
+              </div>
+
+            </div>
+          </div> -->
+      </div>
+
+      <!-- slide show started here -->
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="{% static 'img/chairman.jpg' %}" style="width: 100%" />
+          <div class="text">The chairman of institute.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img
+            src="{% static 'img/teacher_speech.jpg' %}"
+            style="width: 100%"
+          />
+          <div class="text">Teacher talking</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img
+            src="{% static 'img/student_talking.jpg' %}"
+            style="width: 100%"
+          />
+          <div class="text">Student talking</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="{% static 'img/school_16x9.jpg' %}" style="width: 100%" />
+          <div class="text">Students</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="{% static 'img/school_bus.jpg' %}" style="width: 100%" />
+          <div class="text">School Bus</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+
+      <!-- slide show started -->
+    </div>
+    <!-- end of image display -->
+  </div>
+
+  <div class="main__right">
+    <!-- the login form for all -->
+    <form action="#" class="login__form">
+      <label class="uid__lable" for="uid">
+        <input
+          class="uid"
+          type="text"
+          name="uid"
+          required
+          id="uid"
+          placeholder="ব্যবহারকারীর নাম"
+        />
+        <br />
+      </label>
+      <label for="password" class="password__lable">
+        <input
+          class="password"
+          type="password"
+          min="6"
+          required
+          name="password"
+          id="password"
+          placeholder="গোপন নাম্বার"
+        />
+        <br />
+      </label>
+
+      <button class="login__btn" type="submit">প্রবেশ</button>
+    </form>
+
+    <!-- end of the login form for all -->
+
+    <!-- student corner -->
+    <div class="student-corner">
+      <ul class="student-corner__links">
+        <li class="student-corner__link">
+          <a href="{% url 'right:quran' %}">পবিত্র আল-কুরআন</a>
+        </li>
+        <li class="student-corner__link"><a href="{% url 'right:islamic' %}">ইসলামিক আলোচনা</a></li>
+        <li class="student-corner__link">
+          <a href="{% url 'right:book_list' %}">প্রতিযোগিতা সমূহ</a>
+        </li>
+        <li class="student-corner__link">
+          <a href="{% url 'right:gk' %}">সাধারণ জ্ঞানের আসর</a>
+        </li>
+        <li class="student-corner__link">
+          <a href="{% url 'right:by_student' %}">শিক্ষার্থী কর্তৃক রচিত</a>
+        </li>
+        <li class="student-corner__link"><a href="{% url 'right:nutrition' %}">পুষ্টি কর্ণার</a></li>
+        <li class="student-corner__link">
+          <a href="{% url 'right:about_student' %}">শিক্ষার্থীর তথ্যসমূহ</a>
+        </li>
+        <li class="student-corner__link">
+          <a href="{% url 'right:book_list' %}">শিক্ষার্থীর প্রয়োজনে</a>
+        </li>
+      </ul>
+    </div>
+    <!-- end of student corner -->
+
+    <!-- official info -->
+    <div class="our-info">
+      <!-- title -->
+      <h2 class="our-info__title">শিক্ষা কার্যক্রম</h2>
+      <!-- links -->
+      <ul class="our-info__links">
+        <li class="our-info__link">
+          <span class="hand-icon">&#9758;</span><a href="{% url 'right:general_education' %}"> সাধারণ শিক্ষা</a>
+        </li>
+        <li class="our-info__link">
+          <span class="hand-icon">&#9758;</span><a href="{% url 'right:technical_education' %}"> কারিগরি শিক্ষা</a>
+        </li>
+        <li class="our-info__link">
+          <span class="hand-icon">&#9758;</span><a href="{% url 'right:adult_education' %}"> বয়স্ক শিক্ষা</a>
+        </li>
+      </ul>
+    </div>
+    <!-- end of official info -->
+  </div>
+</main>
+
+{% endblock main %} 
+
+{% block js %}
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+  }
+
+</script>
+{% endblock js %}

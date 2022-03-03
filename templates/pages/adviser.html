@@ -1,0 +1,32 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'css/advisers.css' %}">
+
+{% endblock head %}
+
+{% block title %}
+{{adviser.full_name}} - ক্যালিক্স স্কুল এন্ড কলেজ 
+{% endblock title %}
+
+{% block poster %}
+{% include 'poster.html' %}
+{% endblock poster %}
+
+{% block main %}
+<main class="advisers__main">
+
+      <div class="advisers__title">
+        <h1><p>{{adviser.nickname}}</p></h1>
+      </div>
+
+      <h1 class="adviser__name" >{{adviser.full_name}}</h1>
+      <div class="adviser__desc">
+
+        {{adviser.description | safe}}
+      </div>
+
+      </div>
+    </main>
+{% endblock main %}
