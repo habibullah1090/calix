@@ -1,0 +1,108 @@
+.teachers-main {
+  padding: 1rem;
+}
+
+.teachers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+  gap: 3.5rem;
+  margin: 5rem auto;
+  padding: 0 8rem;
+  justify-items: center;
+}
+
+.teacher {
+  --clr-red: #ff4848;
+  --border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #6fe564;
+  border-radius: var(--border-radius);
+  max-width: 50rem;
+  border: 5rem solid var(--clr-red);
+  width: 100%;
+
+  transition:all .2s;
+}
+.teacher:hover{
+  transform: scale(1.05);
+  border-color: #fff;
+}
+.teacher > div {
+  padding: 2rem 0;
+}
+.teacher__top {
+  padding-top: 0.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.teacher__title {
+  font-size: 3rem;
+}
+
+.teacher__middle {
+  padding: 1rem 0;
+}
+
+.teacher__name {
+  font-size: 2.2rem;
+ 
+}
+.teacher__mobile-box {
+  margin-top: 3rem;
+}
+.teacher__mobile a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2.2rem;
+  line-height: 1;
+  transition: 0.1s linear;
+
+  padding-top: 0.7rem;
+  padding-right: 1.2rem;
+  padding-bottom: 0rem;
+  padding-left: 1.2rem;
+
+  color: rgb(46, 46, 46);
+
+  border-bottom: 0.1rem solid black;
+}
+
+.teacher__mobile a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+/* teacher bottom */
+
+.social__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.2rem 0rem 0 0;
+}
+li.social__link {
+  list-style: none;
+}
+li.social__link a svg {
+  display: inline-block;
+  transition: 0.1s linear;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #fff;
+}
+li.social__link a svg:hover #tw {
+  fill: #03a9f4;
+}
+li.social__link a svg:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* .social__links svg:hover #twitter__bg {
+  fill: #ffffff;
+}
+
+.social__links svg:hover #twitter__center {
+  fill: #03a9f4;
+} */

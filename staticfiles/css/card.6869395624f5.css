@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #17d16b;
+}
+
+.directors-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.director {
+  padding: 50px 90px;
+}
+.product {
+  width: 40rem;
+  height: 55rem;
+  perspective: 100rem;
+}
+
+.product-top {
+  padding: 15px;
+}
+.product-inner {
+
+  --rotate-y: 180deg;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+.product-inner.show{
+  transform: rotateY(var(--rotate-y)); 
+}
+.product-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  transform: translateZ(2.5rem);
+}
+.product-top {
+  height: 50%;
+  width: calc(100% + 1px);
+  background: linear-gradient(#0794a6, #9bae07);
+  color: rgb(0, 0, 0);
+}
+.product-top h1 {
+  font-style: italic;
+  font-size: 6rem;
+  opacity: 0.3;
+}
+.product-bottom {
+  padding: 5rem 3rem;
+}
+
+
+.product-bottom p {
+  font-size: 1.2rem;
+}
+.product-bottom h2 {
+  margin-bottom: 3.5rem;
+  color: #008394;
+  letter-spacing: 0.1rem;
+}
+.product-bottom h1 {
+  font-style: 4rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.product-bottom h1 span {
+  color: #008394;
+}
+.product-bottom button {
+  padding: 0.9rem 2.5rem;
+  background: transparent;
+  color: #008394;
+  border: 0.1rem solid #008394;
+  border-radius: 3rem;
+  outline: none;
+  cursor: pointer;
+}
+.color-select {
+  display: flex;
+  float: right;
+  margin-top: -1rem;
+}
+.select-item {
+  margin: 0 1rem;
+  padding: 1rem 2rem;
+  box-shadow: -0.5rem 0 0.8rem 0.2rem rgba(156, 216, 244, 0.5);
+  text-align: center;
+  cursor: pointer;
+
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  color: black;
+}
+.select-item img {
+  width: 80%;
+  padding-top: 10%;
+}
+.select-item:hover {
+  background: rgba(156, 216, 244, 0.5);
+  box-shadow: none;
+  transition: 0.5s;
+}
+.product-top2 {
+  background: linear-gradient(#c370fd, #3be1b8);
+}
+.product-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  transform: translateZ(-2.5rem) rotateY(180deg);
+}
+.left-side,
+.right-side {
+  width: 5rem;
+  height: 100%;
+  background: yellow;
+  transform: rotateY(90deg);
+  position: absolute;
+  top: 0;
+  left: -2.5rem;
+}
+.right-side {
+  transform: rotateY(-90deg);
+  left: auto;
+  right: -2.5rem;
+}

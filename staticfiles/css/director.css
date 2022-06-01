@@ -1,0 +1,23 @@
+.director__main {
+  background-color: var(--clr-green-light);
+}
+.director {
+  text-align: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.director__title {
+  padding: 2rem 0;
+  margin: 0;
+}
+.director__img {
+  max-width: 50rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.director__img img {
+  width: 100%;
+  padding: 0.5rem 5rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,224 @@
+.main-expectation {
+  text-align: center;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.expectation {
+  background-color: rgb(255, 255, 255);
+}
+.expectation__title h1 {
+  padding: 1.6rem 3rem;
+}
+.expectation__title h1 p {
+  padding: 0.5rem 4rem;
+}
+.navigation__icon {
+  margin-left: 11px;
+}
+.helptext,
+[for="id_what_you_say"] {
+  display: none;
+}
+
+input {
+  background-color: red;
+  border: none;
+  padding: 2rem;
+  color: white;
+}
+input::placeholder {
+  color: rgb(102, 102, 102);
+  color: yellow;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.input__form {
+  max-width: 83.6rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.input__form p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name,
+.email,
+.phone {
+  flex: 3;
+  margin-bottom: 10px;
+}
+label {
+  flex: 1;
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+
+#submit {
+  border: none;
+}
+
+.django-ckeditor-widget {
+  position: relative;
+}
+#id_what_you_say {
+  display: block;
+  width: 83rem;
+}
+
+/* for button */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
+.back {
+  width: 33%;
+  height: 200px;
+  float: left;
+  background-color: #eeeeee;
+  border: 10px;
+  border-color: #ffffff;
+  border-style: solid;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  counter-increment: bc;
+  padding: 0px 5px 5px 5px;
+}
+
+.back:before {
+  content: counter(bc) "_";
+  position: absolute;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1260px) {
+  .back {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .back {
+    width: 100%;
+  }
+}
+
+.button_base {
+  margin: 0;
+  border: 0;
+  font-size: 18px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -100px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+.button_base:hover {
+  cursor: pointer;
+}
+
+/* ### ### ### 01 */
+
+/* ### ### ### 02 */
+
+/* ### ### ### 03 */
+
+/* ### ### ### 04 */
+
+/* ### ### ### 05 */
+.b05_3d_roll {
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+}
+
+.b05_3d_roll div {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: #000000 solid 1px;
+  pointer-events: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.b05_3d_roll div:nth-child(1) {
+  color: #000000;
+  background-color: #000000;
+  transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform-origin: 50% 50% -25px;
+  -webkit-transform-origin: 50% 50% -25px;
+  -moz-transform-origin: 50% 50% -25px;
+}
+
+.b05_3d_roll div:nth-child(2) {
+  color: #000000;
+  background-color: #ffffff;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform-origin: 50% 50% -25px;
+  -webkit-transform-origin: 50% 50% -25px;
+  -moz-transform-origin: 50% 50% -25px;
+}
+
+.b05_3d_roll:hover div:nth-child(1) {
+  color: #ffffff;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+}
+
+.b05_3d_roll:hover div:nth-child(2) {
+  background-color: #000000;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+}
+
+/* ### ### ### 06 */
+
+/* ### ### ### 07 */
+
+/* ### ### ### 08 */
+
+/* ### ### ### 09 */
+
+/* ### ### ### 10 */
+/* ### ### ### 10 ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### */
+
+/* ### ### ### 11 */
+
+/* ### ### ### 12 */
